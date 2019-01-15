@@ -11,6 +11,7 @@ const app = express();
 // poll config
 const poll = require('./routes/poll');
 
+// static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // body parser
