@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pollingKHK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .tile {
+            height: 100px;
+            margin: 15px auto;
+        }
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;
+            padding: 10px;
+        }
+        label {
+            margin-right: 10px;
+        }
+        label > input { 
+            display: none;
+        }
+        label > img {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            width: 150px;
+        }
+        label > input:checked + img { 
+            border: 2px solid #2885bb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container center-align">
+        <h3>Choose your favourite football club</h3>
+        <form id="vote-form">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="barcelona" value="FC Barcelona">
+                            <img src="http://demo.wirone.info/FC_Barcelona_CSS_logo/gfx/fc-barcelona-logo.jpg" alt="FC Barcelona">
+                        </label>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="real-madrid" value="Real Mardid CF">
+                            <img src="https://0.allegroimg.com/s512/03a953/ebe06dff4d61ab73bcf77dd4a680" alt="Real Mardid CF">
+                        </label>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="manchester-united" value="Manchester United FC">
+                            <img src="https://4.allegroimg.com/s512/039db2/88abea944101b468d8f8b38049c4" alt="">
+                        </label>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="chelsea" value="Chelsea FC">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" alt="Chelsea FC">
+                        </label>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="arsenal" value="Arsenal FC">
+                            <img src="https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png" alt="Arsenal FC">
+                        </label>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="juventus" value="Juventus FC">
+                            <img src="https://purepng.com/public/uploads/large/purepng.com-juventus-logojuventuslogojuventus-turin-logonew-21529676316hzqzr.png" alt="Juventus FC">
+                        </label>
+                    </div>
+                </div>
+                <div class="col s6 m4 l3">
+                    <div class="tile">
+                        <label>
+                            <input type="radio" name="club" id="bayern" value="FC Bayern Munich">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg" alt="FC Bayern Munich">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn blue" value="Vote">
+        </form>
+        <br>
+        <div id="chart-container" style="width: 100%; height: 300px;"></div>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.3.1/pusher.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
